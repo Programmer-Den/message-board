@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Message board</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User's message board</title>
 </head>
-<body>
-  <a href="/new">New (click here)</a>
+<body style="font-size: 3.8rem; font-family: serif, sans-serif;">
+  <a href="/new">New one</a> <b style="font-size: 5.8rem">←</b> click here to add one & more
   <br>
-  <p><%= locals.text0 %></p>
-  <p><%= locals.user0 %></p>
-  <p><%= locals.added0 %></p>
   <br>
-  <p><%= locals.text1 %></p>
-  <p><%= locals.user1 %></p>
-  <p><%= locals.added1 %></p>
+  <% for (let i = messages.length - 1; i >= 0; i--) { %>
+       <p><b>Message:</b> <em><%= locals[`text${i}`]  %></em></p>
+       <p><b>User:   </b> <em><%= locals[`user${i}`]  %></em></p>
+       <p><b>Added:  </b> <em><%= locals[`added${i}`] %></em></p>
+       <br>
+  <% } %>
 </body>
 </html>

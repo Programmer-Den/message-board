@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User's message form</title>
 </head>
-<body>
-  <header>Username message form</header>
+<body style="font-size: 3.8rem;">
+  <header style="font-variant: small-caps;"><b>User's message form</b></header>
   <br>
-  <form method="POST" action="/new">
-    <label for="username">Username:</label>
-    <input  id="username" name="username" type="text">
-
-    <label for="message">Message:</label>
-    <input  id="message"  name="message"  type="text">
-
-    <button type="sumbit">Sumbit</button>
+  <form method="POST" action="/new" style="display: grid;">
+    <label for="username"><b>Username:</b></label>
+    <input  id="username" name="username" type="text" style="font-size: 3rem; font-style: oblique;">
+    <br>
+    <label for="message"><b>Message:</b></label>
+    <input  id="message"  name="message"  type="text" style="font-size: 3rem; font-style: oblique;">
+    <br>
+    <button style="font-size: 3.8rem; cursor: pointer;" type="sumbit">Sumbit</button>
   </form>
 </body>
 </html>

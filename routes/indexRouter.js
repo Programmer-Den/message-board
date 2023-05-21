@@ -4,10 +4,10 @@ const router = express.Router();
 
 router.use(display);
 
-const messages   = [];
-const productObj = {};
+const messages   = [],
+      productObj = {};
 
-router.get('/', (req, res) => res.render('index', { ...productObj }) );
+router.get('/', (req, res) => res.render('index', { messages, ...productObj } ) );
 
 router.post('/new', (req, res) => {
   messages.push({
